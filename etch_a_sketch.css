@@ -1,4 +1,5 @@
 .background {
+  overflow: auto;
   position: fixed;
   background: #eee;
   width: 100%;
@@ -15,26 +16,107 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-.grid {
+#header {
+  overflow: auto;
+  text-align: center;
+  clear: both;
+  width: 100%;
+  height: 20%;
+  background-color: #677075;
+}
+.middle {
   float: left;
-  border: 1px solid black;
-  padding: 10px;
+  padding:10px;
+  width: 40%;
   height: 100%;
-  width: 66.6%;
+  text-align: center;
+  border: 3px solid #DCDCDC; 
+  background-color: #CBD5D4;
+}
+.grid {
+  margin: 0 auto;
+  border: 2px solid #DCDCDC;
+  height: 960px;
+  width: 960px;
 }
 .left-side {
   float: left;
   padding:10px;
-  width: 33.3%;
+  width: 30%;
   height: 100%;
-  border: 1px solid black;
+  background-color: #B4B6B3;
+  border: 1px solid #DCDCDC;
+  text-align: center;
 }
-#row1{
-  height: 50%;
-  width: 100%;
+.right-side {
   float: left;
-  border: 1px solid black;
+  padding:10px;
+  width: 30%;
+  height: 100%;
+  background-color: #B4B6B3;
+  border: 1px solid #DCDCDC;
+  text-align: center;
+}
+.squares{
+  float: left;
   padding: 2px;
 }
 
+.highlight{
+  background-color: #E518f9
+}
 
+.drawing {
+  background-color: #f28bfc;
+}
+/*empty for jquery to add random color */
+.random{
+  
+}
+
+button{
+  background-color: #9618f9;
+  border: 2px solid white;
+  color: #CBD5D4;
+  width: 5%;
+  height: 40%;
+  margin: 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: auto; 
+}
+#clear {
+  background-color: #CBD5D4;
+  color: black;
+}
+#trail {
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  background: #CBD5D4;
+  background: -webkit-linear-gradient(left, #CBD5D4 , #9618f9); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #CBD5D4, #9618f9); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #CBD5D4, #9618f9); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #CBD5D4 , #9618f9); /* Standard syntax */
+}
+#random {
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  background: red; /* For browsers that do not support gradients */
+  /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+  /* For Opera 11.1 to 12.0 */
+  background: -o-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+  /* For Fx 3.6 to 15 */
+  background: -moz-linear-gradient(left,red,orange,yellow,green,blue,indigo,violet);
+  /* Standard syntax */
+  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+}
